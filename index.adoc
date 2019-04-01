@@ -1,7 +1,35 @@
-= The UN Vector Tile Toolkit Primer
+The UN Vector Tile Toolkit Primer
+=================================
+:Revision: 0.1
+:toc:
+:toclevels: 1
 
-== who
+== Abstract
 
-== how
+The UN Open GIS Initiative is catalyzing the development of an open community for basemap vector tile providers. The Initiative promotes the UN Vector Tile Toolkit, a package of open source tools designed to enable public basemap providers, such as the United Nations geospatial information services or governmental mapping organizations, among others, to deliver their basemap vector tiles leveraging the latest web map technologies. The toolkit provides a set of Node.js open source scripts designed for developers to use in conjunction with existing and proven open-source vector tile software (such as https://github.com/mapbox/tippecanoe[Tippecanoe], https://github.com/maputnik/editor[Maputnik], https://github.com/mapbox/mapbox-gl-js[Mapbox GL JS] and https://github.com/ibesora/vt-optimizer[vt-optimizer]). The toolkit will help organizations to produce, host, style, and optimize fast and interoperable basemap vector tiles, making them available with various application frameworks. 
 
-== what
+This paper presents the methodology followed to support the requirements from the UN Peacekeeping operations’ point of view. The significant challenges were to ensure (1) flexibility of the software so that it works with different source data, including UN mission-specific basemap data and global OpenStreetMap data, (2) automatic and continuous update of global basemap vector tiles, (3) fast vector tiles that can be used with mobile devices in the field, and (4) interoperability with existing enterprise geospatial software frameworks. 
+
+We approached these challenges by introducing "on-the-fly vector tile schema modification" to the Toolkit so that an agile adaptation, improvement, and optimization of the vector tile schema is possible. This method also reduces the use of temporary storage and improves the processing time by exploiting the outstanding stream processing capabilities of Node.js and Tippecanoe. We also adopted an approach to produce basemap vector tiles in modules, so that the processes to produce and deploy the vector tiles are well pipelined. This modularization approach also extended the scalability of the Toolkit by allowing parallel or even distributed production. Quantitative measurements, like in vt-optimizer, were other dominant methodology adopted in the Toolkit that enabled evidence-based performance tuning and production time reduction the vector tiles. As a result, we successfully implemented automatic and continuous updates of basemap vector tiles from a continuously updated PostGIS database. The paper also covers how the project ensured interoperability with different existing enterprise geospatial software frameworks that use less-advanced web map libraries.
+
+The project aims to build a sustainable community of developers supporting the provision of fast and interoperable basemap vector tiles that meet the requirements of various users in the field missions and UN headquarters among others.
+
+== Executive Summary
+
+=== Purpose
+The purpose of the UN Vector Tile Toolkit is to mainstream the use of vector tiles in public organizations.
+
+=== Goals
+- Provision of methods for automatic and continuous update of basemap vector tiles
+- Sustainable developer community to maintain and extend the UN Vector Tile Toolkit
+
+== Background
+
+== Precedents
+
+== Collaborators
+- UN Geospatial Information Section (UNGIS)
+- UN Global Service Centre (UNGSC)
+- OSGeo Japan Chapter (OSGeo.JP)
+- Geospatial Information Authority of Japan (GSI)
+- and more upcoming.
