@@ -4,6 +4,9 @@
 # the product
 https://un-vector-tile-toolkit.github.io/primer
 
+# ask us anything
+Ask us anything on [issues](https://github.com/un-vector-tile-toolkit/primer/issues).
+
 # install
 ```console
 (sudo) gem install asciidoctor

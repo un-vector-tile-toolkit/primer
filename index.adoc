@@ -14,6 +14,32 @@ We approached these challenges by introducing "on-the-fly vector tile schema mod
 
 The project aims to build a sustainable community of developers supporting the provision of fast and interoperable basemap vector tiles that meet the requirements of various users in the field missions and UN headquarters among others.
 
+== Housekeeping issues
+
+=== Status of this document
+
+Work in progress. We aim to finanize the version 1 of the document in June 2019.
+
+=== Keywords
+
+- **basemap vector tiles**
+- **vector tile technology** (let's use the singular form)
+- **on-the-fly vector tile schema modifications**
+- **mbtiles module farm** (let's use the singular form even if with multiple tilesets)
+- **real-time image-tile generator**
+- **dominant web map platforms** (let's use the plural form)
+
+=== Other editing rules
+
+- Let's use the http://www.dgacm.org/editorialmanual[United Nations Editorial Manual]. In a nutshell, 
+-- Dates are in European style.
+-- English is basically British. 
+-- However, use Organization rather than Organisation. Please refer to the https://www.un.org/en/charter-united-nations/[Charter of the United Nations].
+- Let's use http://asciidoc.org/[AsciiDoc] as the text document format. We use https://asciidoctor.org/[Asciidoctor] as the text processor and publishing toolchain.
+
+=== License of this Document
+https://unlicense.org/[Unlicense]. We might migrate to https://creativecommons.org/publicdomain/zero/1.0/[CC0] because this is not a code but a document. 
+
 == Executive Summary
 
 === Purpose
@@ -25,11 +51,112 @@ The purpose of the UN Vector Tile Toolkit is to mainstream the use of vector til
 
 == Background
 
-== Precedents
+=== Vector tile technology in dominant platforms and then in Open Source
+
+Dominant web map platforms have adopted **vector tile technology** as early as 2010, although their technology was not always Open Source.
+
+With the advent of OpenStreetMap in 2004, Open Source implementation of the web map technology was hugely accelerated. 
+
+In 2014, https://github.com/mapbox/vector-tile-spec[Mapbox Vector Tile Specification] and https://github.com/mapbox/mapbox-gl-js[Mapbox GL JS] was released.
+
+The License of the Mapbox Vector Tile Specification is as the following:
+
+[quote, Mapbox Vector Tile Specification, https://github.com/mapbox/vector-tile-spec]
+----
+The text of this specification is licensed under a Creative Commons Attribution 3.0 United States License. However, the use of this spec in products and code is entirely free: there are no royalties, restrictions, or requirements.
+----
+
+Mapbox GL JS is an Open Source software released under the 3-Clause BSD license.
+
+=== Public organizations to catch up
+
+Most public organizations has not adopted **vector tile technology**. However, clients of web maps from a public organizations tend to compare the web maps of the public organization with the ones from the **dominant web map platforms**.
+
+The UN Vector Tile Toolkit is a project aimed for public organizations to catch up with the vector tile technology of **dominant web map platforms**.
+
+== Related works
+
+=== The Global Mapping project
+Since 1996 to 2016, the Global Mapping project conducted technology transfer among National Geospatial Information Authorities. 
+
+=== The UN Open GIS initiative
+The http://unopengis.org[UN Open GIS Initiative] was established in 2016 with a goal to identify and develop open source GIS software that meets the requirements of UN operations, taking full advantage of the expertise of mission parnters.
+
+=== GSI Research and Development Master Plan 
+http://www.gsi.go.jp/common/000092243.pdf[GSI Research and Development Master Plan] (in Japanese language) stipulated conducting research and development for the provision of basemap vector tiles.
+
+=== OS Open ZoomStack
+On 28 January, 2019, the Ordnance Survey officially released OS Open Zoomstack, basemap vector tiles that covers the UK area.
+
+=== OpenICGC
+https://openicgc.github.io[OpenICGC] provides basemap vector tiles provided by Institut Cartografic i Geologic de Catalunya. 
+
+=== UN Secretary-General's Strategy on New Technologies
+The Secretary-General of the United Nations has published https://www.un.org/en/newtechnologies[Secretary-General's Strategy on New Technologies] on September 2018. 
+
+The principles of the Strategy are:
+
+1. protect and promote global values
+2. foster inclusion and transparency
+3. work in partnership
+4. build on existing capabilities and mandate
+5. be humble and continue to learn
+
+=== OGC Vector Tile Pilot
+http://www.opengeospatial.org/projects/initiatives/vt-pilot-2018
+
+== Considerations
+If public organizations catch up with the **vector tile technology** of dominant web map platforms, it will benefit not only the clients of the web maps of the public organizations. In addition, it will also benefit **dominant web platforms** by converging the technology. 
+
+In order for the UN Vector Tile Toolit - a project in a cost-neutral manner - to sustain, the project needs to carefully align itself with the Open Source culture. 
+
+In comparison with collaboration on data, collaboration on software is easier among public organizations that deal with geospatial information. 
+
+We can also leverege the convening power of the United Nations to bring together the relevant actors in the technological development in **basemap vector tiles**. 
+
+== Project definition and major challenges
+
+=== Project definition
+To facilitate users with flexible tools to produce vector tiles from various data sources required, to host them, to style them, and to optimize them. 
+
+The main target users are public organizations that have role to provide basemap vector tiles, no matter publicly or for internal use. 
+
+=== Major challenges
+
+==== Flexible software
+
+Existing Open Source projects often depends on specifics of the OpenStreetMap data. In the UN Vector Tile Toolkit, we tried to add some more flexibilities. 
+
+==== Automatic and continuous update
+
+==== Mobile ready
+
+==== Interoperability with existing enterprise geospatial frameworks
+
+== Future possibilities
+
+=== More distributed deployment
+- Because the vector tiles are stored in a **mbtiles module farm**, it is easy to distribute to more advanced locations. 
 
 == Collaborators
-- UN Geospatial Information Section (UNGIS)
-- UN Global Service Centre (UNGSC)
-- OSGeo Japan Chapter (OSGeo.JP)
-- Geospatial Information Authority of Japan (GSI)
-- and more upcoming.
+NOTE: Let's use alphabetical order inside each collaborating parties.
+
+=== UN Geospatial Information Section (UNGIS)
+- Hidenori Fujimura
+- Timur Obukhov
+
+=== UN Global Service Centre (UNGSC)
+- Diego Gonzalez Ferreiro
+- Francis Mugambi
+- Oliva Martin Sanchez
+
+=== OSGeo Japan Chapter (OSGeo.JP)
+- Hirofumi Hayashi
+- Nobusuke Iwasaki
+- Yoichi Kayama
+
+=== Geospatial Information Authority of Japan (GSI)
+- Takenori Sato
+- Yusuke Motojima
+
+=== and more upcoming.

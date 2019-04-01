@@ -442,7 +442,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_abstract">Abstract</a></li>
+<li><a href="#_housekeeping_issues">Housekeeping issues</a></li>
 <li><a href="#_executive_summary">Executive Summary</a></li>
+<li><a href="#_background">Background</a></li>
+<li><a href="#_related_works">Related works</a></li>
+<li><a href="#_considerations">Considerations</a></li>
+<li><a href="#_project_definition_and_major_challenges">Project definition and major challenges</a></li>
+<li><a href="#_future_possibilities">Future possibilities</a></li>
 <li><a href="#_collaborators">Collaborators</a></li>
 </ul>
 </div>
@@ -462,6 +468,61 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>The project aims to build a sustainable community of developers supporting the provision of fast and interoperable basemap vector tiles that meet the requirements of various users in the field missions and UN headquarters among others.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_housekeeping_issues">Housekeeping issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_status_of_this_document">Status of this document</h3>
+<div class="paragraph">
+<p>Work in progress. We aim to finanize the version 1 of the document in June 2019.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keywords">Keywords</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>basemap vector tiles</strong></p>
+</li>
+<li>
+<p><strong>vector tile technology</strong> (let&#8217;s use the singular form)</p>
+</li>
+<li>
+<p><strong>on-the-fly vector tile schema modifications</strong></p>
+</li>
+<li>
+<p><strong>mbtiles module farm</strong> (let&#8217;s use the singular form even if with multiple tilesets)</p>
+</li>
+<li>
+<p><strong>real-time image-tile generator</strong></p>
+</li>
+<li>
+<p><strong>dominant web map platforms</strong> (let&#8217;s use the plural form)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_editing_rules">Other editing rules</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Let&#8217;s use the <a href="http://www.dgacm.org/editorialmanual">United Nations Editorial Manual</a>. In a nutshell,&#8201;&#8212;&#8201;Dates are in European style.&#8201;&#8212;&#8201;English is basically British.&#8201;&#8212;&#8201;However, use Organization rather than Organisation. Please refer to the <a href="https://www.un.org/en/charter-united-nations/">Charter of the United Nations</a>.</p>
+</li>
+<li>
+<p>Let&#8217;s use <a href="http://asciidoc.org/">AsciiDoc</a> as the text document format. We use <a href="https://asciidoctor.org/">Asciidoctor</a> as the text processor and publishing toolchain.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_license_of_this_document">License of this Document</h3>
+<div class="paragraph">
+<p><a href="https://unlicense.org/">Unlicense</a>. We might migrate to <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> because this is not a code but a document.</p>
+</div>
 </div>
 </div>
 </div>
@@ -490,33 +551,261 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_collaborators">Collaborators</h2>
+<h2 id="_background">Background</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_vector_tile_technology_in_dominant_platforms_and_then_in_open_source">Vector tile technology in dominant platforms and then in Open Source</h3>
+<div class="paragraph">
+<p>Dominant web map platforms have adopted <strong>vector tile technology</strong> as early as 2010, although their technology was not always Open Source.</p>
+</div>
+<div class="paragraph">
+<p>With the advent of OpenStreetMap in 2004, Open Source implementation of the web map technology was hugely accelerated.</p>
+</div>
+<div class="paragraph">
+<p>In 2014, <a href="https://github.com/mapbox/vector-tile-spec">Mapbox Vector Tile Specification</a> and <a href="https://github.com/mapbox/mapbox-gl-js">Mapbox GL JS</a> was released.</p>
+</div>
+<div class="paragraph">
+<p>The License of the Mapbox Vector Tile Specification is as the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>The text of this specification is licensed under a Creative Commons Attribution 3.0 United States License. However, the use of this spec in products and code is entirely free: there are no royalties, restrictions, or requirements.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Mapbox GL JS is an Open Source software released under the 3-Clause BSD license.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_public_organizations_to_catch_up">Public organizations to catch up</h3>
+<div class="paragraph">
+<p>Most public organizations has not adopted <strong>vector tile technology</strong>. However, clients of web maps from a public organizations tend to compare the web maps of the public organization with the ones from the <strong>dominant web map platforms</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The UN Vector Tile Toolkit is a project aimed for public organizations to catch up with the vector tile technology of <strong>dominant web map platforms</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_related_works">Related works</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_the_global_mapping_project">The Global Mapping project</h3>
+<div class="paragraph">
+<p>Since 1996 to 2016, the Global Mapping project conducted technology transfer among National Geospatial Information Authorities.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_un_open_gis_initiative">The UN Open GIS initiative</h3>
+<div class="paragraph">
+<p>The <a href="http://unopengis.org">UN Open GIS Initiative</a> was established in 2016 with a goal to identify and develop open source GIS software that meets the requirements of UN operations, taking full advantage of the expertise of mission parnters.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gsi_research_and_development_master_plan">GSI Research and Development Master Plan</h3>
+<div class="paragraph">
+<p><a href="http://www.gsi.go.jp/common/000092243.pdf">GSI Research and Development Master Plan</a> (in Japanese language) stipulated conducting research and development for the provision of basemap vector tiles.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_os_open_zoomstack">OS Open ZoomStack</h3>
+<div class="paragraph">
+<p>On 28 January, 2019, the Ordnance Survey officially released OS Open Zoomstack, basemap vector tiles that covers the UK area.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_openicgc">OpenICGC</h3>
+<div class="paragraph">
+<p><a href="https://openicgc.github.io">OpenICGC</a> provides basemap vector tiles provided by Institut Cartografic i Geologic de Catalunya.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_un_secretary_generals_strategy_on_new_technologies">UN Secretary-General&#8217;s Strategy on New Technologies</h3>
+<div class="paragraph">
+<p>The Secretary-General of the United Nations has published <a href="https://www.un.org/en/newtechnologies">Secretary-General&#8217;s Strategy on New Technologies</a> on September 2018.</p>
+</div>
+<div class="paragraph">
+<p>The principles of the Strategy are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>protect and promote global values</p>
+</li>
+<li>
+<p>foster inclusion and transparency</p>
+</li>
+<li>
+<p>work in partnership</p>
+</li>
+<li>
+<p>build on existing capabilities and mandate</p>
+</li>
+<li>
+<p>be humble and continue to learn</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_vector_tile_pilot">OGC Vector Tile Pilot</h3>
+<div class="paragraph">
+<p><a href="http://www.opengeospatial.org/projects/initiatives/vt-pilot-2018" class="bare">http://www.opengeospatial.org/projects/initiatives/vt-pilot-2018</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_considerations">Considerations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If public organizations catch up with the <strong>vector tile technology</strong> of dominant web map platforms, it will benefit not only the clients of the web maps of the public organizations. In addition, it will also benefit <strong>dominant web platforms</strong> by converging the technology.</p>
+</div>
+<div class="paragraph">
+<p>In order for the UN Vector Tile Toolit - a project in a cost-neutral manner - to sustain, the project needs to carefully align itself with the Open Source culture.</p>
+</div>
+<div class="paragraph">
+<p>In comparison with collaboration on data, collaboration on software is easier among public organizations that deal with geospatial information.</p>
+</div>
+<div class="paragraph">
+<p>We can also leverege the convening power of the United Nations to bring together the relevant actors in the technological development in <strong>basemap vector tiles</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_definition_and_major_challenges">Project definition and major challenges</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_project_definition">Project definition</h3>
+<div class="paragraph">
+<p>To facilitate users with flexible tools to produce vector tiles from various data sources required, to host them, to style them, and to optimize them.</p>
+</div>
+<div class="paragraph">
+<p>The main target users are public organizations that have role to provide basemap vector tiles, no matter publicly or for internal use.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_major_challenges">Major challenges</h3>
+<div class="sect3">
+<h4 id="_flexible_software">Flexible software</h4>
+<div class="paragraph">
+<p>Existing Open Source projects often depends on specifics of the OpenStreetMap data. In the UN Vector Tile Toolkit, we tried to add some more flexibilities.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_automatic_and_continuous_update">Automatic and continuous update</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_mobile_ready">Mobile ready</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_interoperability_with_existing_enterprise_geospatial_frameworks">Interoperability with existing enterprise geospatial frameworks</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_possibilities">Future possibilities</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_more_distributed_deployment">More distributed deployment</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>UN Geospatial Information Section (UNGIS)</p>
-</li>
-<li>
-<p>UN Global Service Centre (UNGSC)</p>
-</li>
-<li>
-<p>OSGeo Japan Chapter (OSGeo.JP)</p>
-</li>
-<li>
-<p>Geospatial Information Authority of Japan (GSI)</p>
-</li>
-<li>
-<p>and more.</p>
+<p>Because the vector tiles are stored in a <strong>mbtiles module farm</strong>, it is easy to distribute to more advanced locations.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_collaborators">Collaborators</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Let&#8217;s use alphabetical order inside each collaborating parties.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_un_geospatial_information_section_ungis">UN Geospatial Information Section (UNGIS)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Hidenori Fujimura</p>
+</li>
+<li>
+<p>Timur Obukhov</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_un_global_service_centre_ungsc">UN Global Service Centre (UNGSC)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Diego Gonzalez Ferreiro</p>
+</li>
+<li>
+<p>Francis Mugambi</p>
+</li>
+<li>
+<p>Oliva Martin Sanchez</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_osgeo_japan_chapter_osgeo_jp">OSGeo Japan Chapter (OSGeo.JP)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Hirofumi Hayashi</p>
+</li>
+<li>
+<p>Nobusuke Iwasaki</p>
+</li>
+<li>
+<p>Yoichi Kayama</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geospatial_information_authority_of_japan_gsi">Geospatial Information Authority of Japan (GSI)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Takenori Sato</p>
+</li>
+<li>
+<p>Yusuke Motojima</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_and_more_upcoming">and more upcoming.</h3>
+
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-04-01 16:05:16 -0400
+Last updated 2019-04-01 17:56:25 -0400
 </div>
 </div>
 </body>
