@@ -11,7 +11,7 @@ Ask us anything on [issues](https://github.com/un-vector-tile-toolkit/primer/iss
 ```console
 (sudo) gem install asciidoctor
 (sudo) gem install asciidoctor-diagram
-(sudo) gen install --pre adciidoctor-pdf
+(sudo) gem install --pre adciidoctor-pdf
 git clone git@github.com:un-vector-tile-toolkit/primer
 cd primer
 ```
